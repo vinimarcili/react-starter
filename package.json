@@ -1,12 +1,12 @@
 {
-  "name": "test",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-starter",
+  "version": "1.0.0",
+  "description": "React starter project",
+  "author": "Vinícius Marcili",
   "engines": {
     "node": "^16.14.2"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
@@ -31,7 +31,10 @@
     "build:staging": "REACT_APP_ENV=staging npm run build",
     "build:production": "REACT_APP_ENV=production npm run build",
     "build:development": "REACT_APP_ENV=dev npm run build",
-    "test": "craco test",
+    "test:craco": "craco test",
+    "test": "cross-env jest",
+    "test:coverage": "cross-env jest --coverage",
+    "test:watch": "cross-env jest --watch",
     "eject": "craco eject"
   },
   "eslintConfig": {
@@ -54,17 +57,22 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
     "@types/eslint": "^8.4.10",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "craco-plugin-scoped-css": "^1.1.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-ts-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-environment-jsdom": "^29.3.1",
     "prettier": "^2.8.1",
     "prettier-eslint": "^15.0.1",
-    "sass": "^1.56.2"
+    "sass": "^1.56.2",
+    "ts-jest": "^29.0.3"
   }
 }
