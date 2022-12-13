@@ -2,6 +2,9 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^16.14.2"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,7 +20,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "postinstall": "husky install",
     "start": "craco start",
+    "lint": "eslint src --ext js,ts,tsx --fix",
     "custom-start": "sh -ac '. ./.env.${REACT_APP_ENV}; craco start'",
     "start:production": "REACT_APP_ENV=production npm run custom-start",
     "start:staging": "REACT_APP_ENV=staging npm run custom-start",
@@ -49,7 +54,17 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
+    "@types/eslint": "^8.4.10",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
     "craco-plugin-scoped-css": "^1.1.1",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-ts-react-important-stuff": "^3.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.2",
+    "prettier": "^2.8.1",
+    "prettier-eslint": "^15.0.1",
     "sass": "^1.56.2"
   }
 }

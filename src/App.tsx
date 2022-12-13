@@ -1,7 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import './App.scoped.scss';
+import '@/App.scoped.scss'
+import './App.scss'
+import logo from './logo.svg'
 
 function App() {
   return (
@@ -12,17 +11,12 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         {process.env.REACT_APP_ENV_NAME}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
