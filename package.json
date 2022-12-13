@@ -17,10 +17,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "custom-start": "sh -ac '. ./.env.${REACT_APP_ENV}; craco start'",
+    "start:production": "REACT_APP_ENV=production npm run custom-start",
+    "start:staging": "REACT_APP_ENV=staging npm run custom-start",
+    "start:development": "REACT_APP_ENV=dev npm run custom-start",
+    "build": "sh -ac '. ./.env.${REACT_APP_ENV}; craco build'",
+    "build:staging": "REACT_APP_ENV=staging npm run build",
+    "build:production": "REACT_APP_ENV=production npm run build",
+    "build:development": "REACT_APP_ENV=dev npm run build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +46,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.0.0",
+    "craco-plugin-scoped-css": "^1.1.1",
+    "sass": "^1.56.2"
   }
 }
