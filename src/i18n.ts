@@ -19,8 +19,8 @@ export const resources = {
 } as const
 
 i18n
-  .use(Backend)
   .use(initReactI18next)
+  .use(Backend)
   .init({
     defaultNS,
     ns: ['default'],
