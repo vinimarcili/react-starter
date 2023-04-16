@@ -28,7 +28,8 @@
   "scripts": {
     "postinstall": "husky install",
     "start": "craco start",
-    "lint": "eslint src --ext js,ts,tsx --fix",
+    "lint": "eslint src --ext js,ts,tsx",
+    "lint:fix": "eslint src --ext js,ts,tsx --fix",
     "custom-start": "sh -ac '. ./.env.${REACT_APP_ENV}; craco start'",
     "start:production": "REACT_APP_ENV=production npm run custom-start",
     "start:staging": "REACT_APP_ENV=staging npm run custom-start",
