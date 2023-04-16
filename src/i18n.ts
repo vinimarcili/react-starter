@@ -8,13 +8,13 @@ import ptGlobal from '@assets/locales/pt.json'
 export const defaultNS = 'default'
 export const resources = {
   en: {
-    default: enGlobal
+    default: enGlobal,
   },
   pt: {
-    default: ptGlobal
+    default: ptGlobal,
   },
   es: {
-    default: esGlobal
+    default: esGlobal,
   },
 } as const
 
@@ -23,9 +23,7 @@ i18n
   .use(initReactI18next)
   .init({
     defaultNS,
-    ns: [
-      'default'
-    ],
+    ns: ['default'],
     load: 'all',
     supportedLngs: ['en', 'es', 'pt'],
     lng: navigator.language?.split('-')[0] || 'en',
