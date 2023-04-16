@@ -1,0 +1,23 @@
+name: Pull Request validation
+on: 'pull_request'
+jobs:
+  build:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name
+        run: echo GITHUB_HEAD_REF
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - name: Install
+        run: npm install
+      - name: Build
+        run: npm run build-stg
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          projectId: wallbee-app
+          target: stg-wallbee

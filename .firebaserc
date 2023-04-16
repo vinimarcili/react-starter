@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "wallbee-app"
+  },
+  "targets": {
+    "wallbee-app": {
+      "hosting": {
+        "stg-wallbee": [
+          "stg-wallbee"
+        ],
+        "wallbee": [
+          "wallbee"
+        ]
+      }
+    }
+  }
+}
