@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["ts-react-important-stuff", "plugin:prettier/recommended", "plugin:react-hooks/recommended"],
+  "extends": ["ts-react-important-stuff", "plugin:react-hooks/recommended"],
   "parser": "@typescript-eslint/parser",
   "overrides": [
     {
