@@ -1,9 +1,9 @@
 import i18n from 'i18next'
 import Backend from 'i18next-http-backend'
 import { initReactI18next } from 'react-i18next'
-import enGlobal from '@assets/locales/en.json'
-import esGlobal from '@assets/locales/es.json'
-import ptGlobal from '@assets/locales/pt.json'
+import enGlobal from '@/assets/locales/en.json'
+import esGlobal from '@/assets/locales/es.json'
+import ptGlobal from '@/assets/locales/pt.json'
 
 export const defaultNS = 'default'
 export const resources = {

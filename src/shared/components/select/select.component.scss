@@ -1,0 +1,8 @@
+.loader-select {
+  position: absolute;
+  right: 2rem;
+  top: 3rem;
+  &.no-label {
+    top: 1rem;
+  }
+}

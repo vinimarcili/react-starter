@@ -1,0 +1,67 @@
+.wrapper-all-inside-input {
+  position: relative;
+  label {
+    display: block;
+    color: var(--text_color);
+    // flex-direction: column;
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+.wrapper-input-squid {
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  select {
+    color: var(--text_color);
+    &:hover,
+    &:focus {
+      outline-width: thin;
+    }
+    &.has-icon-external {
+      padding-right: 3rem;
+    }
+    &.error {
+      border-width: 1px;
+      border-color: var(--red);
+      &:focus {
+        box-shadow: 0px 0px 0px 1px var(--red);
+      }
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 1rem;
+  top: 37px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  &.no-label {
+    top: 6px;
+  }
+  &.has-icon-external {
+    right: 2rem;
+  }
+}
+.icon-external {
+  color: inherit !important;
+}
+
+.box-validation {
+  min-height: 18px;
+  overflow: hidden;
+  &.visibility-hidden-force {
+    min-height: 0;
+    height: 0;
+  }
+  &.has-max-length {
+    visibility: visible !important;
+    max-width: calc(100% - 50px);
+  }
+}

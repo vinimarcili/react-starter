@@ -1,0 +1,120 @@
+.wrapper-all-inside-input {
+  position: relative;
+  width: 100%;
+  label {
+    display: flex;
+    color: var(--text_color);
+    // flex-direction: column;
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+.wrapper-input-squid {
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  input,
+  textarea {
+    color: var(--text_color);
+    &:hover,
+    &:focus {
+      outline-width: thin;
+    }
+    &.has-icon-external {
+      padding-right: 3rem;
+    }
+    &.error {
+      border-width: 1px;
+      border-color: var(--red);
+      &:focus {
+        box-shadow: 0px 0px 0px 1px var(--red);
+      }
+    }
+    &::-ms-reveal,
+    &::-ms-clear {
+      display: none;
+    }
+  }
+  textarea {
+    min-height: 120px;
+    resize: none;
+    overflow: auto;
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+  line-height: 1;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  &.no-label {
+    top: calc(1rem + 2px);
+  }
+  &.textarea-icon {
+    top: 3rem;
+    right: 1rem;
+    &.no-label {
+      top: 0.75rem;
+    }
+  }
+  &.has-icon-external {
+    right: 2rem;
+  }
+}
+.icon-external {
+  color: inherit !important;
+}
+
+.box-validation {
+  min-height: 18px;
+  overflow: hidden;
+  &.visibility-hidden-force {
+    min-height: 0;
+    height: 0;
+  }
+  &.has-max-length {
+    visibility: visible !important;
+    max-width: calc(100% - 50px);
+  }
+}
+
+.max-length-name {
+  width: 50px;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  text-align: right;
+  padding: 0 5px 0;
+  margin: 2.5px auto 5px;
+  min-height: 16px;
+  color: var(--gray);
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+.button-show-password {
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  color: var(--text_color);
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  line-height: 1;
+  &:hover {
+    cursor: pointer;
+  }
+  &.no-label {
+    top: calc(1rem + 2px);
+  }
+}
